@@ -33,5 +33,10 @@ docker rm -f yxx-keymetrics-container
 docker rmi -f yxx-keymetrics-image
 ```
 
+## 验证
+1. 该方案已经在 `template-node-express`中得到验证，部署没有问题
+2. 关于日志的处理，如何将数据存储到宿主机上
+3. 
+
 ## 参考
 - [keymetrics/pm2](https://hub.docker.com/r/keymetrics/pm2/)

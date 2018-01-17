@@ -2,6 +2,7 @@ const express = require("express");
 var app = express();
 const port = 5110;
 app.get("/", function(req, res) {
+    console.log("---------------");
     res.send("Hello node pm2!");
 });
 

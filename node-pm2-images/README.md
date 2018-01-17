@@ -19,7 +19,7 @@ docker build --rm -f Dockerfile -t yxx-keymetrics-image .
 # http://127.0.0.1:5121/ 
 # http://127.0.0.1:5120/
 # 都可以访问该服务
-docker run -d -i -t --name='yxx-keymetrics-container' --net="bridge" -p 5120:5120  yxx-keymetrics-image
+docker run -d --name='yxx-keymetrics-container' --net="bridge" -p 5120:5120  yxx-keymetrics-image
 docker run -d -i -t --name='yxx-keymetrics-container1' --net="bridge" -p 5121:5120  yxx-keymetrics-image
 
 # 查看项目运行状态
@@ -30,5 +30,8 @@ docker logs -f yxx-keymetrics-container1
 docker rm -f yxx-keymetrics-container
 
 # 删除镜像
-docker rmi -f a4a01566a785
+docker rmi -f yxx-keymetrics-image
 ```
+
+## 参考
+- [keymetrics/pm2](https://hub.docker.com/r/keymetrics/pm2/)
